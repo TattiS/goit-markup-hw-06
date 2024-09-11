@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -7,16 +10,67 @@ body {
   color: #434455;
   background-color: #ffffff;
 }
-ul {
+ul,
+ol {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 a {
   text-decoration: none;
-  color: #434455;
+  /**color: #434455;**/
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+img {
+  display: block;
+}
+
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /*header*/
-
+.main-header {
+  border-bottom: 1px solid #e7e9fc;
+}
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+}
+.main-header-nav {
+  padding: 24px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 .header-logo {
   font-family: Raleway, sans-serif;
   font-size: 18px;
@@ -25,9 +79,14 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.03em;
   color: #4d5ae5;
+  margin-right: 76px;
 }
 .header-logo-text {
   color: #2e2f42;
+}
+.nav-menu {
+  display: flex;
+  gap: 40px;
 }
 .nav-item {
   font-weight: 500;
@@ -43,6 +102,12 @@ a {
 .header-address {
   font-style: normal;
 }
+.header-address-contacts {
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  padding: 24px 0;
+}
 .contacts-item:hover,
 .contacts-item:focus {
   color: #404bbf;
@@ -54,6 +119,8 @@ a {
 .hero {
   background-color: #2e2f42;
   text-align: center;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 .hero-title {
   font-weight: 700;
@@ -62,6 +129,9 @@ a {
   line-height: 1.07;
   color: #ffffff;
   text-align: center;
+  max-width: 496px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-order-btn {
   background-color: #4d5ae5;
@@ -71,6 +141,9 @@ a {
   letter-spacing: 0.04em;
   color: #ffffff;
   cursor: pointer;
+  width: 169px;
+  height: 56px;
+  margin-top: 48px;
 }
 .hero-order-btn:hover,
 .hero-order-btn:focus,
@@ -87,7 +160,12 @@ section > h2 {
 }
 
 /*features section*/
-
+.features-section,
+.team-section,
+.portfolio-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 .features-section-header {
   font-weight: 700;
   font-size: 36px;
@@ -95,6 +173,11 @@ section > h2 {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+}
+.features-section-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
 }
 .features-item-header {
   font-weight: 500;
@@ -116,9 +199,20 @@ section > h2 {
 }
 .team-section-header {
   text-transform: capitalize;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 72px;
+}
+.team-list {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
 }
 .team-member-card {
   background: #ffffff;
+}
+.team-member-card-content {
+  margin: 32px auto;
 }
 .team-member-card h3 {
   font-weight: 500;
@@ -141,6 +235,20 @@ section > h2 {
 
 .portfolio-section-header {
   text-transform: capitalize;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 72px;
+}
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.portfolio-card {
+  border-right: 1px solid #e7e9fc;
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  padding: 32px 16px;
 }
 .portfolio-card-title {
   font-weight: 500;
@@ -161,6 +269,11 @@ section > h2 {
 .main-footer {
   background-color: #2e2f42;
 }
+.main-footer .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 156px;
+}
 .main-footer-logo {
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -169,6 +282,7 @@ section > h2 {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  margin-bottom: 16px;
 }
 .footer-logo-text {
   color: #f4f4fd;
@@ -179,4 +293,5 @@ section > h2 {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  max-width: 264px;
 }
