@@ -401,7 +401,6 @@ section > h2 {
 }
 .main-footer .container {
   display: flex;
-  column-gap: 120px;
   align-items: baseline;
 }
 .footer-logo-wrapper {
