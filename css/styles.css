@@ -653,6 +653,9 @@ section > h2 {
 .modal-form-input:focus + .modal-form-icon {
   fill: #4d5ae5;
 }
+.modal-form-comment-wrapper {
+  margin-bottom: 16px;
+}
 .modal-form-comment {
   width: 100%;
   height: 120px;
