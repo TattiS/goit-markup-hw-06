@@ -706,14 +706,14 @@ section > h2 {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-form-checkbox:focus + .modal-form-checkbox-label > .modal-checkbox,
+.modal-form-checkbox:hover + .modal-form-checkbox-label > .modal-checkbox {
+  border: 1px solid #404bbf;
+}
 .modal-form-checkbox:checked + .modal-form-checkbox-label > .modal-checkbox {
   background-color: #404bbf;
   fill: #f4f4fd;
   border: none;
-}
-.modal-form-checkbox:focus + .modal-form-checkbox-label > .modal-checkbox,
-.modal-form-checkbox:hover + .modal-form-checkbox-label > .modal-checkbox {
-  border: 1px solid #404bbf;
 }
 .form-policy-link {
   text-decoration: underline;
